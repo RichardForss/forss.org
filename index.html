@@ -1057,6 +1057,8 @@
         @media (max-width: 768px) {
             html { font-size: 15px; }
 
+            .container { padding: 0 1.25rem; }
+
             .nav-links {
                 display: none;
                 position: fixed;
@@ -1081,31 +1083,72 @@
                 z-index: 1001;
             }
 
-            .hero .container {
-                flex-direction: column-reverse;
-                text-align: center;
+            .hero {
+                min-height: auto;
+                padding: 7rem 0 4rem;
             }
 
-            .hero h1 { font-size: 2.5rem; }
-            .hero-description { max-width: 100%; }
-            .hero-actions { justify-content: center; }
-            .hero-meta { justify-content: center; }
+            .hero .container {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero h1 { font-size: 2.25rem; }
+            .hero-description {
+                max-width: 100%;
+                font-size: 1.05rem;
+                line-height: 1.7;
+            }
+
+            .hero-badge {
+                font-size: 0.7rem;
+                padding: 0.35rem 0.85rem;
+                margin-bottom: 1.25rem;
+            }
+
+            .hero-actions {
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-meta {
+                justify-content: center;
+                gap: 1.5rem;
+                margin-top: 2rem;
+                padding-top: 1.5rem;
+            }
+
+            .hero-meta-value { font-size: 1.5rem; }
+            .hero-meta-label { font-size: 0.7rem; }
 
             .photo-frame {
-                width: 180px;
-                height: 180px;
+                width: 160px;
+                height: 160px;
             }
-
-            .photo-initials { font-size: 3rem; }
 
             .about-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
 
+            .section { padding: 3.5rem 0; }
+            .section-title { font-size: 1.75rem; }
+            .section-subtitle { font-size: 1rem; }
+
             .services-grid,
             .insights-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                padding: 1.75rem 1.5rem;
             }
 
             .tech-categories {
@@ -1119,11 +1162,11 @@
             }
 
             .timeline-item {
-                gap: 1.25rem;
+                gap: 1rem;
             }
 
             .timeline-content {
-                padding: 1.5rem;
+                padding: 1.25rem;
             }
 
             .timeline-content .mobile-date {
@@ -1134,22 +1177,65 @@
                 margin-bottom: 0.5rem;
             }
 
-            .section { padding: 4rem 0; }
-            .section-title { font-size: 2rem; }
+            .timeline-header {
+                gap: 1rem;
+            }
+
+            .timeline-title h3 { font-size: 1rem; }
+            .timeline-title .company { font-size: 0.85rem; }
+            .timeline-description { font-size: 0.85rem; }
+
+            .company-logo {
+                width: 40px;
+                height: 40px;
+                padding: 5px;
+            }
 
             .achievements-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1rem;
             }
 
+            .achievement-card {
+                padding: 1.25rem 1rem;
+            }
+
+            .achievement-value { font-size: 2.25rem; }
+
+            .highlight-card {
+                padding: 1.25rem;
+            }
+
+            .early-career-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .insight-card {
+                padding: 1.5rem;
+            }
+
             .contact-methods {
                 flex-direction: column;
-                align-items: center;
+                align-items: stretch;
+            }
+
+            .contact-method {
+                justify-content: center;
+                padding: 0.875rem 1.5rem;
             }
 
             .contact-locations span { display: none; }
             .contact-locations br { display: block; }
             .contact-locations { line-height: 2; }
+        }
+
+        /* Small phones (iPhone SE etc.) */
+        @media (max-width: 380px) {
+            .hero h1 { font-size: 1.9rem; }
+            .hero-meta { gap: 1rem; }
+            .hero-meta-value { font-size: 1.3rem; }
+            .achievement-value { font-size: 1.9rem; }
+            .section-title { font-size: 1.5rem; }
         }
 
         @media (min-width: 769px) {
